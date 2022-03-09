@@ -9,7 +9,8 @@ namespace InputUsingMethods
             Console.WriteLine("Welcome to InputUsingMethods Project\n");
             string Name = TakeUserName();
             int Age = TakeAge();
-            Console.WriteLine("\nHi " + Name + ", Your Age is: " + Age);
+            string Location = TakeLocation();
+            Console.WriteLine("\nHi " + Name + ", Your Age is: " + Age + " and Your Location is: " + Location);
         }
 
         public static string TakeUserName()
@@ -25,6 +26,12 @@ namespace InputUsingMethods
             string StringAge = Console.ReadLine();
             int IntAge = int.Parse(StringAge);
             return IntAge;
+        }
+
+        public static string TakeLocation()
+        {
+            Console.Write("Enter Your Location: ");
+            return Console.ReadLine();
         }
     }
 }
